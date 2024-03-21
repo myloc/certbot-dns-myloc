@@ -2,9 +2,7 @@ import os
 import sys
 from setuptools import find_packages
 from setuptools import setup
-
-with open(os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__))), 'VERSION')) as version_file:
-    version = version_file.read().strip()
+from certbot_dns_myloc.version import __version__
 
 install_requires = [
     'certbot>=2.0.0',
@@ -14,7 +12,7 @@ install_requires = [
 
 setup(
     name='certbot-dns-myloc',
-    version=version,
+    version=__version__,
     description='myLoc DNS Authenticator plugin for Certbot',
     url='https://github.com/myloc/certbot-dns-myloc',
     author='myLoc managed IT AG',

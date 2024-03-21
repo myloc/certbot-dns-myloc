@@ -10,11 +10,9 @@ from typing import Callable
 from typing import Dict
 from typing import List
 from typing import Optional
+from certbot_dns_myloc.version import __version__
 
 logger = logging.getLogger(__name__)
-
-with open(os.path.join(os.path.abspath(os.path.dirname(__file__)) + '/../', 'VERSION')) as version_file:
-    version = version_file.read().strip()
 
 ACME_TTL: int = 60
 MYLOC_API_FRONTEND_URLS: str = ' - https://zkm.myloc.de/s/api/token\n' + \
@@ -91,7 +89,7 @@ class _MyLocClient:
             base_url=MYLOC_API_URLS[brand],
             headers={
                 'Authorization': 'Bearer {}'.format(api_token),
-                'User-Agent': 'Certbot-myLoc-Authenticator {}'.format(version),
+                'User-Agent': 'Certbot-myLoc-Authenticator {}'.format(__version__),
                 'Accept': 'application/json',
             }
         )
