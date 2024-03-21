@@ -98,6 +98,6 @@ fork the repository, make your changes, and submit a pull request.
 
 This Certbot plugin is open-source software, and its use is governed by
 the terms of its respective license. Please refer to the
-[LICENSE]{.title-ref} file in the repository for licensing information.
+[LICENSE](LICENSE) file in the repository for licensing information.
 The legal disclaimer has been added under the Legal Disclaimer
 section to make it clear
